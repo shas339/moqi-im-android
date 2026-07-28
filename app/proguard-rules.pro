@@ -12,3 +12,5 @@
 
 -keepattributes *Annotation*
 -keepattributes SourceFile,LineNumberTable
+# Sherpa-onnx JNI 通过字段名读取配置；不可混淆。
+-keep class com.k2fsa.sherpa.onnx.** { *; }
