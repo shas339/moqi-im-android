@@ -39,7 +39,7 @@ jobs:
         run: printf '%s' "$RELEASE_KEYSTORE_BASE64" | base64 --decode > release.jks
 
       - name: Build release APKs
-        run: ./gradlew assembleFullRelease assembleLiteRelease
+        run: ./gradlew assembleFullDebug assembleLiteDebug
         env:
           RELEASE_KEYSTORE_FILE: ${{ github.workspace }}/release.jks
           RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
