@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: moqi-im-android-full-release
-          path: app/build/outputs/apk/full/release/*.apk
+          path: app/build/outputs/apk/**/*.apk
           if-no-files-found: error
 
       - name: Upload lite APK
